@@ -79,7 +79,7 @@ def main_worker(gpu, ngpus_per_node, args):
     start_epoch = trainer.resume_model(model, model_ema, contrast, optimizer)
 
     # init tensorboard logger
-    trainer.init_tensorboard_logger()
+    # trainer.init_tensorboard_logger()
 
     for epoch in range(start_epoch, args.epochs + 1):
         train_sampler.set_epoch(epoch)
